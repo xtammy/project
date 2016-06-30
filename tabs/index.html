@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<ul class="clearfix">
+    <li id="tab1" onclick="clickEle(this)" class="selected">Tab1</li>
+    <li id="tab2" onclick="clickEle(this)">Tab2</li>
+    <li id="tab3" onclick="clickEle(this)">Tab3</li>
+    <li id="tab4" onclick="clickEle(this)">Tab4</li>
+</ul>
+<div id="content1">
+    <p>画堂春（纳兰容若）</p>
+
+    <p>一生一代一双人，争教两处销魂？</p>
+
+    <p>相思相望不相亲，天为谁春。</p>
+
+    <p>浆向蓝桥易取，药成碧海难奔，</p>
+
+    <p>若容相仿日牛津，相对忘贫。</p>
+</div>
+<div id="content2">
+    <p> 一剪梅·舟过吴江（蒋捷）</p>
+
+    <p>一片春愁待酒浇，江上舟摇，楼上帘招。</p>
+
+    <p>秋娘渡与泰娘桥，风去飘飘，雨又潇潇。</p>
+
+    <p>何日归家洗客袍？银字笙调，心字香烧。</p>
+
+    <p>流光容易把人抛，红了樱桃，绿了芭蕉。</p>
+</div>
+<div id="content3">
+    <p>青玉案·元夕（辛弃疾）</p>
+
+    <p>东风夜放花千树，更吹落，星如雨。宝马雕车香满路，</p>
+
+    <p>凤箫声动，玉壶光转，一夜鱼龙舞。</p>
+
+    <p>蛾儿雪柳黄金缕，笑语盈盈暗香去。众里寻他千百度，</p>
+
+    <p>蓦然回首，那人却在，灯火阑珊处。</p>
+</div>
+<div id="content4">
+    <p>浪淘沙（李煜）</p>
+
+    <p>帘外雨潺潺，春意将阑。罗衾不耐五更寒。</p>
+
+    <p>梦里不知身是客，一晌贪欢。</p>
+
+    <p>独自莫凭栏，无限江山，别时容易见时难。</p>
+
+    <p>流水落花春去也，天上人间。</p>
+</div>
+<script>
+    function clickEle(ele){
+        showtabs(ele.id);
+    }
+    function showtabs(id){
+        for(var i= 0,len=document.getElementsByTagName('li').length;i<len;i++){
+            if(id[id.length-1]==i+1){
+                document.getElementById('content'+(i+1)).style.display="block";
+                document.getElementById('tab'+(i+1)).style.backgroundColor="#fff";
+            }else{
+                document.getElementById('content'+(i+1)).style.display="none";
+                document.getElementById('tab'+(i+1)).style.backgroundColor="#3c9";
+            }
+        }
+    }
+</script>
+</body>
+</html>
